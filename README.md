@@ -1,2 +1,6 @@
 # primeGraphics
-A Game based on graphics, which initiates off prime numbers. Programmed with Python3 and Pygame
+A program, which generates graphics based on prime numbers. Programmed with Python3 and Pygame
+
+![image](https://github.com/spheppner/primeGraphics/blob/master/screenshot.png)
+
+## Graphics of Prime
