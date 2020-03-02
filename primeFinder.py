@@ -1,4 +1,4 @@
-def start(mode="prime",position_number=0, position2_number=0):
+def start(mode="prime", position_number=0, position2_number=0, position3_number=0):
     import math
     z = 80 # root: math.sqrt(y)
 
@@ -36,9 +36,33 @@ def start(mode="prime",position_number=0, position2_number=0):
                 else:
                     return False
                 if z == 0:
-                    x = x//position_number
+                    try:
+                        x = x//position_number
+                    except:
+                        pass
                     x += 10
                     x = x//position2_number
+            return True
+        elif pmode == "position3":
+            for z in range(2):
+                if x >= 2:
+                    for y in range(2,x):
+                        if not ( x % y ):
+                            return False
+                else:
+                    return False
+                if z == 0:
+                    try:
+                        x = x//position_number
+                    except:
+                        pass
+                    x += position_number*2
+                    try:
+                        x = x//position2_number
+                    except:
+                        pass
+                    x += position2_number*3
+                    x = x//position3_number
             return True
         
     primes = []
@@ -71,6 +95,16 @@ def start(mode="prime",position_number=0, position2_number=0):
                 primes.append("\n")
                     
             if is_prime_number(x,"position2") is True:
+                primes.append("#")
+            else:
+                primes.append("0")
+    elif mode == "position3":
+        for x in range(y):
+            print(x)
+            if isDivisible(x, z) is True:
+                primes.append("\n")
+                    
+            if is_prime_number(x,"position3") is True:
                 primes.append("#")
             else:
                 primes.append("0")
