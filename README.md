@@ -8,15 +8,13 @@ A program, which generates graphics based on prime numbers. Programmed with Pyth
 ### Navigation
 Use arrow buttons on keyboard to navigate:
 
-->......more
+→ ...... more
 
-<-......less
+← ...... less
 
-|
-v.......navigate down
+↓ ....... navigate down
 
-^
-|.......navigate up
+↑ ....... navigate up
 
 The O.K. button at the left side of the screen is also pressed by using the right arrow. If you press the "O.K." button,
 the new layer will be calculated and the new graphic will be shown.
