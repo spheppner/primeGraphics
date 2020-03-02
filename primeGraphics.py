@@ -411,13 +411,13 @@ class Viewer(object):
         self.max_color_value3 = 10
         self.max_position_value = 10
         self.max_position_value2 = 10
-        self.max_animation_value = 10
+        self.max_position_value3 = 10
         self.color_value = 0
         self.color_value2 = 0
         self.color_value3 = 0
         self.position_value = 0
         self.position_value2 = 0
-        self.animation_value = 0
+        self.position_value3 = 0
         
         #self.color_init_wall = (self.color_value*100+5*self.color_value2)
         self.color_value_wall = ((25*self.color_value3),(25*self.color_value2),(25*self.color_value))
@@ -653,21 +653,23 @@ class Viewer(object):
                             if self.position_value2 > self.max_position_value2:
                                 self.position_value2 = 0
                         elif activeitem == 5:
-                            if self.animation_value < self.max_animation_value:
-                                self.animation_value += 1
-                            if self.animation_value > self.max_animation_value:
-                                self.animation_value = 0
+                            if self.position_value3 < self.max_position_value3:
+                                self.position_value3 += 1
+                            if self.position_value3 > self.max_position_value3:
+                                self.position_value3 = 0
                         elif activeitem == 6:
-                            if self.color_value > 0 or self.color_value2 > 0 or self.color_value3 > 0 or self.position_value > 0 or self.position_value2 > 0:
+                            if self.color_value > 0 or self.color_value2 > 0 or self.color_value3 > 0 or self.position_value > 0 or self.position_value2 > 0 or self.position_value3 > 0:
                                 if self.position_value > 0:
                                     primeFinder.start("position",self.position_value)
-                                elif self.position_value2 > 0:
+                                if self.position_value2 > 0:
                                     primeFinder.start("position2",self.position_value,self.position_value2)
+                                if self.position_value3 > 0:
+                                    primeFinder.start("position3",self.position_value,self.position_value2,self.position_value3)
                                 self.load()
                         elif activeitem == 7:
                             with open("save.txt", "a") as save:
                                 #x = save.readlines()
-                                y = ["#",str(self.color_value),str(self.color_value2),str(self.color_value3),str(self.position_value),str(self.position_value2),str(self.animation_value)]
+                                y = ["#",str(self.color_value),str(self.color_value2),str(self.color_value3),str(self.position_value),str(self.position_value2),str(self.position_value3)]
                                 for z in y:
                                     save.write(z)
                                 for x in y:
@@ -686,7 +688,7 @@ class Viewer(object):
                             #if self.position_value2 > 0:
                             #    primeFinder.start("position2",self.position_value,self.position_value2)
                             #    self.load()
-                            #if self.animation_value > 0:
+                            #if self.position_value3 > 0:
                             #    pass
                             
                     if event.key == pygame.K_LEFT:
@@ -717,10 +719,10 @@ class Viewer(object):
                             if self.position_value2 < 0:
                                 self.position_value2 = 0
                         elif activeitem == 5:
-                            if self.animation_value > 0:
-                                self.animation_value -= 1
-                            if self.animation_value < 0:
-                                self.animation_value = 0
+                            if self.position_value3 > 0:
+                                self.position_value3 -= 1
+                            if self.position_value3 < 0:
+                                self.position_value3 = 0
                                 
                     if event.key == pygame.K_m:
                         self.menurun()
@@ -735,7 +737,7 @@ class Viewer(object):
             value_color3_graphic = self.color_value3 / ( self.max_color_value3 / 100 )
             value_position_graphic = self.position_value / ( self.max_position_value / 100)
             value_position2_graphic = self.position_value2 / ( self.max_position_value2 / 100)
-            value_animation_graphic = self.animation_value / ( self.max_animation_value / 100)
+            value_position3_graphic = self.position_value3 / ( self.max_position_value3 / 100)
             
             equipped_color2 = (233, 111, 233)
             equipped_color = (0,220,220)
@@ -838,8 +840,8 @@ class Viewer(object):
             if self.position_value2 > 0:
                 pygame.draw.rect(self.screen, (0, 0, 220), (Viewer.width-215, 246, int(value_position2_graphic*2), 19))
                 
-            if self.animation_value > 0:
-                pygame.draw.rect(self.screen, (145, 220, 145), (Viewer.width-215, 301, int(value_animation_graphic*2), 19))
+            if self.position_value3 > 0:
+                pygame.draw.rect(self.screen, (0, 0, 220), (Viewer.width-215, 301, int(value_position3_graphic*2), 19))
             
             
             write(self.screen, "O.K.", 1315, 367, (220, 11, 133), 20, True)
