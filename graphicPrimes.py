@@ -1,8 +1,8 @@
 """
 author: Simon HEPPNER
-website: simon.heppner.at
+website: github.com/spheppner/primeGraphics
 email: simon@heppner.at
-name of game: dungeonrunner
+name of game: primeGraphics
 """
 import pygame
 #import math
@@ -389,7 +389,7 @@ class Rocket(VectorSprite):
 class Viewer(object):
     width = 0
     height = 0
-    menuitems = ["Paint", "Credits", "Quit"]
+    menuitems = ["Paint", "Quit"]
     cursorindex = 0
     shakescreen = False
 
@@ -403,7 +403,7 @@ class Viewer(object):
         self.background = pygame.Surface(self.screen.get_size()).convert()
         self.background.fill((255,255,255)) # fill background white
         self.clock = pygame.time.Clock()
-        pygame.display.set_caption("PyPrime")
+        pygame.display.set_caption("primeGraphics | Press ESC to exit")
         self.fps = fps
         self.playtime = 0.0
         self.max_color_value = 10
