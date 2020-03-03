@@ -43,3 +43,6 @@ Currently there are 720 different combinations in color and position value of th
 Move the bars at the left side of the screen, by using the buttons shown above (arrow keys) and see what happens after you press
 the "O.K." Button.
 
+### Little Tip
+
+If you combine the 3rd blue bar other blue bars, there will always be a really good outcome in graphics. :)
