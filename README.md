@@ -5,6 +5,10 @@ A program, which generates graphics based on prime numbers. Programmed with Pyth
 
 ## Graphics of Prime
 
+### Requirements
+- Python
+- Pygame
+
 ### Navigation
 Use arrow buttons on keyboard to navigate:
 
