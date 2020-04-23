@@ -23,9 +23,9 @@ the new layer will be calculated and the new graphic will be shown.
 
 There are six bars on the left side of the screen which have the following meaning: (numbered from top to bottom)
 
-1. 1rd color value
+1. 1st color value
 2. 2nd color value
-3. 3st color value
+3. 3rd color value
 
 4. 1st position value 
 5. 2nd position value   (position values can be individual and might change if other position values are set on specific numbers)
