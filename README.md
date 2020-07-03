@@ -1,4 +1,5 @@
 # primeGraphics
+This is a prototype. I'm currently trying to think of new ways with which I could generate more interactive art. If you have any ideas, PLEASE contact me.
 A program, which generates graphics based on prime numbers. Programmed with Python3 and Pygame
 
 ![image](https://github.com/spheppner/primeGraphics/blob/master/screenshot.png)
